@@ -1,0 +1,130 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  
+}
+.header{
+  background-color: greenyellow;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.linkhref a{
+  text-decoration: none;
+  padding: 1rem;
+  color: black;
+  font-size: 18px;
+}
+
+.bull {
+  padding: 2rem;
+  background-color: greenyellow;
+}
+
+.productscollected {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.eachdiv {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.eachdiv:hover {
+  transform: translateY(-5px);
+}
+
+.divcollection {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  color: #333;
+}
+
+.divcollection img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.divcollection h2 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #2ecc71;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  font-size: 12px;
+  color: #666;
+  height: 50px;
+  padding: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.price-and-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0.5rem 0;
+}
+
+.price-and-buy{
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+}
+
+.buy-btn {
+  padding: 5px 12px;
+  background-color: #2ecc71;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.buy-btn:hover {
+  background-color:  #2ecc71;
+}
+/* MEDIA QUERY */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .linkhref {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .linkhref a {
+    padding: 0.75rem 0;
+  }
+}
+
