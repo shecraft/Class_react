@@ -10,11 +10,13 @@ const Products =()=>{
     const [isLoading, setIsLoading] = useState(false)
     const fetchProducts = async () => {
         try {
-
+            const res = await fetch("http://localhost:4006/api/products")
             const data = await res.json();
             setProducts(data)
+            console.log(data);
+            
         } catch (error) {
-            // console.log(error);
+            console.log(error);
             
         } 
     }
@@ -24,31 +26,32 @@ const Products =()=>{
      }, [])
     fetchProducts()
     return(
-        <section>
-             {
-                products.length === 0 ?(
-                    <div>
-                        <p>No Product!</p>
-                    </div>
-                ) : (
-                    <div className="product" >
-                        {
-                            products.map((ele, index)=>(
-                                <div className="pro" key={index}>
-                                  <div className="tone">
-                                     <img src={ele.image} alt="productImage" />
-                                     <h2>{ele.title}</h2>
-                                     <span>{ele.price}</span>
-                                     <p>{ele.description}</p>
-                                     <Buttons icon={<Icon cName="fas fa-shopping-bag" />} handleClick={shopNow} text="Shop now"/>
-                                  </div>
-                                </div>
-                            ))
-                        }
-                    </div>
-                )
-             }
-        </section>
+        // <section>
+        //      {
+        //         products.length === 0 ?(
+        //             <div>
+        //                 <p>No Product!</p>
+        //             </div>
+        //         ) : (
+        //             <div className="product" >
+        //                 {
+        //                     products.map((ele, index)=>(
+        //                         <div className="pro" key={index}>
+        //                           <div className="tone">
+        //                              {/* <img src={ele.image} alt="productImage" /> */}
+        //                              <h2>{ele.title}</h2>
+        //                              <span>{ele.price}</span>
+        //                              <p>{ele.description}</p>
+        //                              <Buttons icon={<Icon cName="fas fa-shopping-bag" />} handleClick={shopNow} text="Shop now"/>
+        //                           </div>
+        //                         </div>
+        //                     ))
+        //                 }
+        //             </div>
+        //         )
+        //      }
+        // </section>
+        r
     )
 }
 export default Products

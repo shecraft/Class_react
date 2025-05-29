@@ -4,6 +4,12 @@
   box-sizing: content-box;
   
 }
+form{
+  width: 400px;
+  border: 1px solid black;
+  text-align: center;
+  display: block;
+}
 .header{
   background-color: greenyellow;
   display: flex;
@@ -21,7 +27,10 @@
   color: black;
   font-size: 18px;
 }
-
+.loading{
+  font-size: 30px;
+  text-align: center;
+}
 .bull {
   padding: 2rem;
   background-color: greenyellow;
@@ -107,10 +116,104 @@
 }
 
 .buy-btn:hover {
+  background-color:  green;
+  transition: all 2s ease-in-out;
+  transform: translateY(-5px);
+}
+
+.allDivs img{
+  width: 400px;
+}
+
+.allDivs{
+  background-color: greenyellow;
+  text-align: center;
+  padding: 5rem;
+}
+
+.BackToHomepage{
+  /* margin: 1rem; */
+  line-height: 60px;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+.my-swal{
+  width: 200px;
+}
+
+.my-swal .swal-icon--success__line,
+.my-swal .swal-icon--success__ring {
+  width: 30px !important;
+  height: 30px !important;
+}
+
+.form-container {
+  background-color: greenyellow;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  width: 300px;
+  transform: translateX(30rem);
+  padding: 2rem;
+  margin: 2rem;
+}
+
+
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.form-group input:focus {
+  border-color: black;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: black;
+}
+
+.footer{
+  display: flex;
+  justify-content: space-between;
   background-color:  #2ecc71;
 }
 /* MEDIA QUERY */
 @media (max-width: 768px) {
+  .form-container{
+    transform: translateX(-.7rem);
+  }
   .header {
     flex-direction: column;
     align-items: flex-start;
@@ -125,6 +228,13 @@
 
   .linkhref a {
     padding: 0.75rem 0;
+  }
+
+  .footer{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    padding:.6rem  1rem 0 4rem;
+    background-color:  #2ecc71;
   }
 }
 

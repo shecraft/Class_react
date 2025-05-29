@@ -32,7 +32,7 @@ const Product = () => {
        
   // fetchProducts()
     if (isLoading) {
-      return <p>Loading.......</p>
+      return <p className='loading'>Loading.......</p>
     }
   return (
        <section className="bull">
@@ -47,7 +47,7 @@ const Product = () => {
                        <div className='price-and-button'>
                               <p className='price'>${product.price}</p>
                               <Link to ={`/product/${product.id}`}>
-                                 <button className='buy-btn' onClick={buy}>Purchase</button>
+                                 <button className='buy-btn' onClick={buy}>Get Yours<i className="fas fa-shopping-cart"></i></button>
                               </Link>
                            </div>
                            {/* <p className='description'>{product.description}</p>   */}

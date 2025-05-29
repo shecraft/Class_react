@@ -1,7 +1,21 @@
+import swal from "sweetalert"
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
 const SingleProduct = () => {
+  const showAlert = () => {
+    swal({
+      title: "Good job!",
+      text: "Item added to basket",
+      icon: "success",
+      className: "my-swal", 
+      button: {
+        text: "OK",
+        className: "my-button-class", 
+      }
+    });
+  };
+  
   const [products, setProducts] = useState([])
   const [isLoading, setIsLoading] = useState(false)
   const {id} = useParams()
@@ -30,7 +44,7 @@ const SingleProduct = () => {
 
        
   // fetchProducts()
-if(isLoading) return <p>Loading......</p>
+if(isLoading) return <p className='loading'>Loading......</p>
   return (
        <section className="bull">
                       <div  className='productscollected'>
@@ -41,7 +55,7 @@ if(isLoading) return <p>Loading......</p>
                               </div>
                              <div className='price-and-buy'>
                                <p className='price'>{products.price}</p>
-                               <button className='buy-btn'>Add to cart</button>
+                               <button className='buy-btn' onClick={showAlert}>Add to Basket</button>
                              </div>
                               <p className='descript'>{products.description}</p>                         
                            </div>
